@@ -1,22 +1,19 @@
 const paintings = [
   {
     src: '/images/TensionSuave.jpg',
-    title: 'Tension Suave – Wassily Kandinsky',
-    alt: '1 / 4'
+    title: 'Tension Suave – Wassily Kandinsky'
   }, {
     src: '/images/TheSwing.jpeg',
-    title: 'The Swing – Jean-Honoré Fragonard',
-    alt: '2 / 4'
+    title: 'The Swing – Jean-Honoré Fragonard'
   }, {
     src: '/images/ElAquelarre.jpeg',
-    title: 'El Aquelarre – Francisco de Goya',
-    alt: '3 / 4'
+    title: 'El Aquelarre – Francisco de Goya'
   }, {
     src: '/images/DamaMalva.jpg',
-    title: 'Dama Malva – Lyonel Feininger',
-    alt: '4 / 4'
+    title: 'Dama Malva – Lyonel Feininger'
   }
-]
+];
+
 
 const prevImage = document.querySelector('nav a.prev');
 const nextImage = document.querySelector('nav a.next');
@@ -29,6 +26,10 @@ sandbox.load(frag(paintings));
 let startIndex = 0;
 let endIndex = 0;
 let timeline = performance.now() - 9999;
+
+function generateAltText(index, length) {
+  return (index + 1) + ' / ' + length;
+}
 
 const sizer = function () {
   const ww = window.innerWidth
@@ -59,9 +60,11 @@ const prev = function () {
 };
 
 const update = function () {
-  descriptionTag.innerHTML = paintings[endIndex].alt;
+  const altText = generateAltText(endIndex, paintings.length);
+  descriptionTag.innerHTML = altText;
   timeline = performance.now();
 
+  sandbox.setUniform('imageAlt', altText);
   sandbox.setUniform('startIndex', startIndex);
   sandbox.setUniform('endIndex', endIndex);
   tick();
@@ -78,6 +81,7 @@ const tick = function() {
 const load = function () {
   sizer();
   tick();
+  descriptionTag.innerHTML = generateAltText(0, paintings.length);
 
   paintings.forEach((painting, endIndex) => {
     sandbox.setUniform(`textures[${endIndex}]`, painting.src)
