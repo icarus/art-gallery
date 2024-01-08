@@ -50,6 +50,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-bottom: 3vh;
+
+  @media (width < 768px) {
+    padding-bottom: 0vh;
+  }
 }
 
 .canvas-holder canvas {
