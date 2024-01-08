@@ -40,7 +40,7 @@ nav {
   display: flex;
   justify-content: space-between;
 
-  @media (width < 768px) {
+  @media (width < 705px) {
     padding: 2rem 1rem;
   }
 }
@@ -52,7 +52,7 @@ nav {
   justify-content: center;
   padding-bottom: 3vh;
 
-  @media (width < 768px) {
+  @media (width < 705px) {
     padding-bottom: 0vh;
   }
 }
