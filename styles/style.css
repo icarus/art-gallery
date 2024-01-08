@@ -8,14 +8,28 @@ body {
 
 	background-color: #D6F6B6;
 	color: #1d1d1d;
-	width: 1280px;
+	max-width: 1280px;
   margin: 0 auto;
   overflow-y: hidden;
+  box-sizing: border-box;
 
   @media (width < 1280px) {
     width: 100%;
   }
 }
+
+body {
+  font-size: 32px;
+
+  @media (max-width: 768px) {
+    font-size: 28px;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 24px;
+  }
+}
+
 
 header {
   position: fixed;
@@ -26,7 +40,7 @@ header {
   display: flex;
   justify-content: space-between;
 
-  @media (width < 768px) {
+  @media (width < 705px) {
     padding: 2rem 1rem;
   }
 }
@@ -46,15 +60,10 @@ nav {
 }
 
 .canvas-holder {
-  height: 100vh;
+  height: calc(100vh - 4rem);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 3vh;
-
-  @media (width < 705px) {
-    padding-bottom: 0vh;
-  }
 }
 
 .canvas-holder canvas {
