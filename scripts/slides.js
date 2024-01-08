@@ -18,7 +18,7 @@ const paintings = [
     src: '/images/Univers.jpg',
     title: 'Comment une conscience se fait univers – Roberto Matta'
   }, {
-    src: '/images/Nativity.jpg',
+    src: '/images/Nativity.jpeg',
     title: 'Nativity – Antonio da Correggio'
   }, {
     src: '/images/Angel.jpeg',
