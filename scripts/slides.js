@@ -11,6 +11,24 @@ const paintings = [
   }, {
     src: '/images/DamaMalva.jpg',
     title: 'Dama Malva – Lyonel Feininger'
+  }, {
+    src: '/images/Guernica.jpeg',
+    title: 'Guernica – Pablo Picasso'
+  }, {
+    src: '/images/Univers.jpg',
+    title: 'Comment une conscience se fait univers – Roberto Matta'
+  }, {
+    src: '/images/Nativity.jpg',
+    title: 'Nativity – Antonio da Correggio'
+  }, {
+    src: '/images/Angel.jpeg',
+    title: 'Angel – Melozzo da Forlì'
+  }, {
+    src: '/images/Campo.jpeg',
+    title: 'Wheat Field with Cypresses – Vincent van Gogh'
+  }, {
+    src: '/images/Agrigente.jpeg',
+    title: 'Agrigente – Nicolas de Staél'
   }
 ];
 
