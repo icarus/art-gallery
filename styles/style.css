@@ -66,15 +66,12 @@ nav {
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
+  overflow-y: hidden;
 }
 
 .canvas-holder canvas {
   width: 40vmin;
   height: 60vmin;
-
-  @media (width < 705px) {
-    width: calc(100% - 4rem);
-  }
 }
 
 a:hover {
