@@ -9,7 +9,7 @@ body {
 	background-color: #D6F6B6;
 	color: #1d1d1d;
 	width: 1280px;
-  margin: 2rem auto 2rem auto;
+  margin: 0 auto;
   overflow-y: hidden;
 
   @media (width < 1280px) {
@@ -25,6 +25,10 @@ header {
 
   display: flex;
   justify-content: space-between;
+
+  @media (width < 768px) {
+    padding: 2rem;
+  }
 }
 
 nav {
@@ -35,10 +39,14 @@ nav {
 
   display: flex;
   justify-content: space-between;
+
+  @media (width < 768px) {
+    padding: 2rem;
+  }
 }
 
 .canvas-holder {
-  height: 100lvh;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
