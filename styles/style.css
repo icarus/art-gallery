@@ -27,7 +27,7 @@ header {
   justify-content: space-between;
 
   @media (width < 768px) {
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 
@@ -41,7 +41,7 @@ nav {
   justify-content: space-between;
 
   @media (width < 768px) {
-    padding: 2rem;
+    padding: 1rem;
   }
 }
 
