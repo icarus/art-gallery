@@ -60,7 +60,7 @@ nav {
 }
 
 .canvas-holder {
-  height: calc(100vh - 4rem);
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
