@@ -64,6 +64,11 @@ nav {
   display: flex;
   align-items: center;
   justify-content: center;
+
+  @media (width < 705px) {
+    height: 100lvh;
+    overflow-y: hidden;
+  }
 }
 
 .canvas-holder canvas {
